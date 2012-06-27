@@ -1,3 +1,8 @@
+'''
+    Returns lists of tokens, tags, items, and 
+    writes them to text files.
+'''
+
 import nltk
 
 # Load text file
@@ -16,7 +21,7 @@ tokens=nltk.word_tokenize(input)
 freq=nltk.FreqDist(tokens)
     # OUT: <class 'nltk.probability.FreqDist'>
 
-# Sort in decreasing order
+# Sort word list in decreasing order
 items=freq.items()
     # OUT: <type 'list'>
 
@@ -24,17 +29,23 @@ items=freq.items()
 tags=nltk.pos_tag(tokens)
     # OUT: <type 'list'>
 
-# Save list of items
-FILE=open("items.txt","w")
+# Save list of tokens
+FILE=open("out/tokens.txt","w")
+for token in tokens:
+    FILE.writelines(str(token+'\n'))
+FILE.close()
+print "tokens saved."
+
+# Save list of items by frequency
+FILE=open("out/items.txt","w")
 for item in items:
     FILE.writelines(str(item[0]+", "+str(item[1])+'\n'))
 FILE.close()
+print "items saved."
 
-# Save list of tags
-FILE=open("tags.txt","w")
+# Save list of speech tags
+FILE=open("out/tags.txt","w")
 for tag in tags:
     FILE.writelines(str(tag[0]+", "+str(tag[1])+'\n'))
 FILE.close()
-
-
-
+print "tags saved."
