@@ -25,13 +25,13 @@ tags=nltk.pos_tag(tokens)
     # OUT: <type 'list'>
 
 # Save list of items
-FILE=open("tpb_items.txt","w")
+FILE=open("items.txt","w")
 for item in items:
     FILE.writelines(str(item[0]+", "+str(item[1])+'\n'))
 FILE.close()
 
 # Save list of tags
-FILE=open("tpb_tags.txt","w")
+FILE=open("tags.txt","w")
 for tag in tags:
     FILE.writelines(str(tag[0]+", "+str(tag[1])+'\n'))
 FILE.close()
