@@ -1,6 +1,10 @@
+# The Pirate Bay SOPA
+# Luis Cielak
+# luis@luiscielak.com
+
 '''
-    Returns lists of tokens, tags, items, and 
-    writes them to text files.
+Returns lists of tokens, tags, and items, then 
+writes them to text files.
 '''
 
 import nltk
