@@ -5,6 +5,6 @@ Natural language processing and visualization analysis of The Pirate Bay's offic
 ### Tools:
 
 - Python
-- nltk
-
+- NLTK
+- Processing
 
